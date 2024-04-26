@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [BeakAIOps.Testing]" guice-stage="DEVELOPMENT">
+  <test name="ScriptSanityTesting(failed)">
+    <classes>
+      <class name="beakAIOps.ScriptModuleTestCases.TC05EditGlobalLevelScript">
+        <methods>
+          <include name="tearDown"/>
+          <include name="EditGlobalLevelScript"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- beakAIOps.ScriptModuleTestCases.TC05EditGlobalLevelScript -->
+    </classes>
+  </test> <!-- ScriptSanityTesting(failed) -->
+</suite> <!-- Failed suite [BeakAIOps.Testing] -->

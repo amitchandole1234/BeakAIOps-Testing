@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Beak-AIOps-AUtomation-Testing]" guice-stage="DEVELOPMENT">
+  <test name="Test(failed)">
+    <classes>
+      <class name="testCases.TC05EditGlobalLevelScript">
+        <methods>
+          <include name="setUp"/>
+          <include name="EditGlobalLevelScript"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- testCases.TC05EditGlobalLevelScript -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Beak-AIOps-AUtomation-Testing] -->

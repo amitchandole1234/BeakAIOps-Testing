@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-04-26T11:15:09 IST" name="Default suite" finished-at="2024-04-26T11:16:30 IST" duration-ms="81577">
+    <groups>
+    </groups>
+    <test started-at="2024-04-26T11:15:09 IST" name="Default test" finished-at="2024-04-26T11:16:30 IST" duration-ms="81577">
+      <class name="beakAIOps.ScriptModuleTestCases.TC01VerifyLoginFunctinality">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:beakAIOps.ScriptModuleTestCases.TC01VerifyLoginFunctinality@229f66ed]" started-at="2024-04-26T11:15:09 IST" name="setUp" finished-at="2024-04-26T11:15:46 IST" duration-ms="37413" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="loginFunctionalityCheck()[pri:0, instance:beakAIOps.ScriptModuleTestCases.TC01VerifyLoginFunctinality@229f66ed]" started-at="2024-04-26T11:15:46 IST" name="loginFunctionalityCheck" finished-at="2024-04-26T11:16:30 IST" duration-ms="43559" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginFunctionalityCheck -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:beakAIOps.ScriptModuleTestCases.TC01VerifyLoginFunctinality@229f66ed]" started-at="2024-04-26T11:16:30 IST" name="tearDown" finished-at="2024-04-26T11:16:30 IST" duration-ms="518" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- beakAIOps.ScriptModuleTestCases.TC01VerifyLoginFunctinality -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
