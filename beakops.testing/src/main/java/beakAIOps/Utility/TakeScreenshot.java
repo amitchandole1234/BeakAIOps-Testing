@@ -23,7 +23,7 @@ public static void takeScreenshot(WebDriver driver, String screenshotName) throw
     File sourceFile = ts.getScreenshotAs(OutputType.FILE);
     
     // Define the destination directory
-    String destinationDirectory = "D:\\Eclips-Workspace\\beakops.testing\\Application Screenshot\\";
+    String destinationDirectory = "D:\\gitRepository\\beakops.testing\\Application Screenshot\\";
     
     // Get current date and time
     SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMdd_HHmmss");

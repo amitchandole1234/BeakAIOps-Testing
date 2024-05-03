@@ -30,11 +30,13 @@ public class TC05ReactivateGlobalLevelScript extends baseClass
 		ragls.clickOnFilterIcon();
 		ragls.enterTheScriptNameToFilterOut();
 		ragls.clickOnReactivateActionIcon();
+		ragls.clickOnReactivateButton();
 		
 		
 		//Verify The Test Case
 		
-		WebElement reactivate = driver.findElement(By.xpath("//*[@id=\"root\"]/div/div/div/div[2]/main/div/div/div[2]/div/div[2]"));
+		//WebElement reactivate = driver.findElement(By.xpath("//*[@id=\"root\"]/div/div/div/div[2]/main/div/div/div[2]/div/div[2]"));
+		WebElement reactivate =driver.findElement(By.xpath("//div[text()='Script reactivated successfully']"));
 		String ExpectedMessage = "Script reactivated successfully";
 		String ActualMessage = reactivate.getText();
 		 
@@ -58,13 +60,15 @@ public class TC05ReactivateGlobalLevelScript extends baseClass
 	driver.switchTo().defaultContent();			 
 				 
 	
-//Object of LogoutPagePOMClass			 
- 	LogoutPagePOMClass logOutPage = new LogoutPagePOMClass(driver);
- 	logOutPage.clickOnAccountIcon();
-	Thread.sleep(1000);
-	logOutPage.clickOnLogoutOption();
-	logOutPage.clickOnYesAction();
-	Thread.sleep(8000);	
+//Object of LogoutPagePOMClass
+	 System.out.println("Logout Process Start");
+	 	LogoutPagePOMClass logOutPage = new LogoutPagePOMClass(driver);
+	 	logOutPage.clickOnAccountIcon();
+		Thread.sleep(1000);
+		logOutPage.clickOnLogoutOption();
+		logOutPage.clickOnYesAction();
+		Thread.sleep(8000);	
+		System.out.println("Logout Process End");
 
 		
 		

@@ -15,60 +15,75 @@ public class EditGlobalLevelScriptPOMClass
 
 //WebDriver Define	
 	private static WebDriver driver;
-		
-//Step-1 Click On Filter Icon
 	
-		//Navigate to I-Frame
+//PageFactory Define >>
+	
+			public EditGlobalLevelScriptPOMClass(WebDriver driver) 
+			{
+				this.driver = driver;
+				PageFactory.initElements(driver, this);
+			}		
+	
+		
+//Step-1 Click On Filter Icon to Filter the Script
+	
+	//Navigate to I-Frame-->
 		@FindBy(xpath = "//iframe[@id='199']")
 			private WebElement iframeElement;
 			
-		//Click On Filter Icon	
-		@FindBy(xpath="/html[1]/body[1]/div[1]/div[1]/main[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/section[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[4]/div[1]/span[1]/div[1]/*[name()='svg'][1]")
+	//Click On Filter Icon-->
+		@FindBy(xpath="(//*[name()='svg'][@class='css-sr6nr'])[23]")	
 			private WebElement clickFilterIcon;
 			public void clickOnFilterIcon() throws InterruptedException
 			{ 
-				Thread.sleep(2000);
+				Thread.sleep(1000);
 				driver.switchTo().frame(iframeElement);
+				Thread.sleep(3000);
 				clickFilterIcon.click();	
 			}
-	
-//Step-2 Enter The Script Name in to the Filter Input Field to Filter Out >>	
-		
-		 //Enter the Script Name to Filter Out 	
+//Step-2 Enter the Script Name inside the Filter Input 
+			
 		@FindBy(xpath="//input[@placeholder='filter values']")
 			private WebElement enterScriptName;
-			public void enterTheScriptNameToFilterOut() throws InterruptedException
+	
+		@FindBy(xpath="//span[contains(text(),'Global Level Script')]")
+			private WebElement valuePresent;
+
+		@FindBy(xpath="//span[normalize-space()='Select All']")
+			private WebElement clickOnSelectAllButton;
+
+		@FindBy(xpath="/html[1]/body[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/button[1]")
+			private WebElement clickOnOkButton;
+
+		@FindBy(xpath="(//div[@role='button'])[1]")
+			private WebElement clickOnEditActionIcon;
+
+			public void enterTheScriptNameToFilterOut() throws InterruptedException 
 			{
-				enterScriptName.sendKeys("Global Level Script ");
-					
-		 //Click on "Select All" Button
-			WebElement clickOnSelectAllButton = driver.findElement(By.xpath("//span[normalize-space()='Select All']"));
-				clickOnSelectAllButton.click();
-					
-		 //Click On "OK" Button
-			WebElement clickOnOkButton = driver.findElement(By.xpath("/html[1]/body[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/button[1]"));	
-				Thread.sleep(1000);
-				clickOnOkButton.click();
-				driver.switchTo().defaultContent();
+				
+			    enterScriptName.sendKeys("Global Level Script"); // Pass the "Global Level Script" Input on Filter input Field.
+			    Thread.sleep(2000);	    
+			    String ValuePresent= valuePresent.getText();
+			    
+	//Check the Filter Value is Present or No value		   
+			    if (ValuePresent.startsWith("Global Level Script"))	
+			    	{
+			    	 	clickOnSelectAllButton.click();
+			            Thread.sleep(1000);
+			            clickOnOkButton.click();
+			            clickOnEditActionIcon.click();
+			            //driver.switchTo().defaultContent();			    	
+			    	} 
+			    else
+			    	{
+			    	
+			    		System.out.println("Cannot click on Select all and OK Button Bacause The Value is No Values");
+			       }
 			}
-
-//Step-3 Click on Edit Action Icon	
-		//Navigate to I-Frame	
-		@FindBy(xpath="//iframe[@id='199']")
-			private WebElement ifreamele;
+			
+						
 		
-		//Click On Edit Action Icon
-	    @FindBy(xpath="/html[1]/body[1]/div[1]/div[1]/main[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/section[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]")
-	    	private WebElement clickEditAction;
-	    	public void clickOnEditActionIcon() throws InterruptedException
-	    	{
-	    		Thread.sleep(1000);
-	    		driver.switchTo().frame(ifreamele);
-	    		clickEditAction.click();
-	    		driver.switchTo().defaultContent();
-	    	}
-
-//Step-4 To Edit the Script Name "Global Level Script " To "Edited Global Script "
+//Step-3 To Edit the Script Name "Global Level Script" To "Edited Global Script"
 	
 	   @FindBy(xpath="(//input[@id='standard-basic'])[1]")
 	   		private WebElement clearScriptName;
@@ -88,7 +103,8 @@ public class EditGlobalLevelScriptPOMClass
 	   			WebElement clickOnUpdateButton = driver.findElement(By.xpath("//span[normalize-space()='Update']"));
 	   				clickOnUpdateButton.click();
 	   		}
-//Step-5 Click on "Ok" Button	
+//Step-4 Click on "OK" Button :
+	   		
 	    @FindBy(xpath="//button[@class='MuiButtonBase-root MuiButton-root MuiButton-text add-btn']")
 	    	private WebElement clickOK;
 	    	public void clickOnOkButton() throws InterruptedException
@@ -97,13 +113,7 @@ public class EditGlobalLevelScriptPOMClass
 	    		clickOK.click();
 	    	}
 	
-//PageFactory Define >>
-	
-		public EditGlobalLevelScriptPOMClass(WebDriver driver) 
-		{
-			this.driver = driver;
-			PageFactory.initElements(driver, this);
-		}	
+
 	
 	
 

@@ -13,8 +13,6 @@ import beakAIOps.Utility.TakeScreenshot;
 public class TC02CreateGlobalLevelScript extends baseClass
 {
 
-private Object folder;
-
 @Test
 	public void createGlobalLevelScript() throws InterruptedException, IOException
 	{
@@ -38,31 +36,31 @@ private Object folder;
 				 	System.out.println("Test Case is Pass");
 				 	Thread.sleep(1500);
 				 
-	//TakeScreenshot Test case is Pass
-				 	
-				 	 TakeScreenshot.takeScreenshot(driver, "Global_Level_Script_Created_Sucessfully");
-				 	
+	//TakeScreenshot Test case is Pass	
+				 	 TakeScreenshot.takeScreenshot(driver, "Global_Level_Script"); 	
 			 	}
 			 else
 			 	{
-				 System.out.println("Global Script is not Created");
+				 System.out.println("Unable to Create Global Level Script");
 				 System.out.println("Test Case if Fail");
 				 
 	//Take Screenshot if Test Case is Failed
-				 TakeScreenshot.takeScreenshot(driver, "Global_Level_Script_isNotCreated");
+				 TakeScreenshot.takeScreenshot(driver, "Failed_tocreate_Global_Script");
 			
 			 	}	 
 			 	Thread.sleep(1000);
 			 	
 			cgls.clickOnOkButton();
 		 
-//Object of LogoutPagePOMClass			 
-		 	LogoutPagePOMClass logOutPage = new LogoutPagePOMClass(driver);
-		 	logOutPage.clickOnAccountIcon();
-			Thread.sleep(1000);
-			logOutPage.clickOnLogoutOption();
-			logOutPage.clickOnYesAction();
-			Thread.sleep(8000);		 		
+//Object of LogoutPagePOMClass
+			 System.out.println("Logout Process Start");
+			 	LogoutPagePOMClass logOutPage = new LogoutPagePOMClass(driver);
+			 	logOutPage.clickOnAccountIcon();
+				Thread.sleep(1000);
+				logOutPage.clickOnLogoutOption();
+				logOutPage.clickOnYesAction();
+				Thread.sleep(8000);	
+				System.out.println("Logout Process End"); 		
 		
 	}
 	
