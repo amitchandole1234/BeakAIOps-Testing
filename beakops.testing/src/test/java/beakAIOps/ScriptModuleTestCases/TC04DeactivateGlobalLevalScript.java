@@ -29,7 +29,7 @@ public class TC04DeactivateGlobalLevalScript extends baseClass
 		DeactivateGlobalLevelScriptPOMClass dgls = new DeactivateGlobalLevelScriptPOMClass(driver);
 		dgls.clickOnFilterIcon();
 		dgls.enterTheScriptNameToFilterOut();
-		dgls.clickOnDeactivateActionIcon();
+		//dgls.clickOnDeactivateActionIcon();
 		dgls.clickOnDeactivatePopupButton();
 		dgls.getSucessMessage();
 		WebElement SucessMessgae = driver.findElement(By.xpath("//div[text()='Script deactivated successfully']"));
@@ -59,13 +59,15 @@ public class TC04DeactivateGlobalLevalScript extends baseClass
 	driver.switchTo().defaultContent();			 
 				 
 	
-//Object of LogoutPagePOMClass			 
- 	LogoutPagePOMClass logOutPage = new LogoutPagePOMClass(driver);
- 	logOutPage.clickOnAccountIcon();
-	Thread.sleep(1000);
-	logOutPage.clickOnLogoutOption();
-	logOutPage.clickOnYesAction();
-	Thread.sleep(8000);	
+//Object of LogoutPagePOMClass
+	 System.out.println("Logout Process Start");
+	 	LogoutPagePOMClass logOutPage = new LogoutPagePOMClass(driver);
+	 	logOutPage.clickOnAccountIcon();
+		Thread.sleep(1000);
+		logOutPage.clickOnLogoutOption();
+		logOutPage.clickOnYesAction();
+		Thread.sleep(8000);	
+		System.out.println("Logout Process End");
 
 		
 		

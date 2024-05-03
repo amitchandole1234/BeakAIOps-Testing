@@ -38,29 +38,17 @@ public class TC01VerifyLoginFunctinality extends baseClass
 		 			System.out.println("Test case is Fail");
 		 		}	
 		 	
-		 Thread.sleep(30000);
-		 
-		 
-		
-	 
-
-		 
-		 
-		 
-		 
-		 
-		 
-		 
-		 
+		 Thread.sleep(30000);	 
 		 
 		 
 //Object of LogoutPagePOMClass
-		 
+		 System.out.println("Logout Process Start");
 		 	LogoutPagePOMClass logOutPage = new LogoutPagePOMClass(driver);
 		 	logOutPage.clickOnAccountIcon();
 			Thread.sleep(1000);
 			logOutPage.clickOnLogoutOption();
 			logOutPage.clickOnYesAction();
-			Thread.sleep(8000);		 
+			Thread.sleep(8000);	
+			System.out.println("Logout Process End");
 	}
 }

@@ -7,7 +7,6 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import beakAIOps.TestingPOM.CreateGlobalLevelScriptPOMClass;
-import beakAIOps.TestingPOM.DeactivateGlobalLevelScriptPOMClass;
 import beakAIOps.TestingPOM.EditGlobalLevelScriptPOMClass;
 import beakAIOps.TestingPOM.LogoutPagePOMClass;
 import beakAIOps.Utility.TakeScreenshot;
@@ -33,7 +32,7 @@ public class TC03EditGlobalLevelScript extends baseClass
 	EditGlobalLevelScriptPOMClass edls = new EditGlobalLevelScriptPOMClass(driver);
 		edls.clickOnFilterIcon();
 		edls.enterTheScriptNameToFilterOut();
-		edls.clickOnEditActionIcon();
+		//edls.clickOnEditActionIcon();
 		edls.selectAllAndClearScriptName();
 			
 		
@@ -62,13 +61,15 @@ public class TC03EditGlobalLevelScript extends baseClass
 		 edls.clickOnOkButton();
 		
 			
-//Object of LogoutPagePOMClass			 
+//Object of LogoutPagePOMClass
+		 System.out.println("Logout Process Start");
 		 	LogoutPagePOMClass logOutPage = new LogoutPagePOMClass(driver);
 		 	logOutPage.clickOnAccountIcon();
 			Thread.sleep(1000);
 			logOutPage.clickOnLogoutOption();
 			logOutPage.clickOnYesAction();
 			Thread.sleep(8000);	
+			System.out.println("Logout Process End");
 
 			
 	}

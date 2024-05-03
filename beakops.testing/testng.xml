@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="BeakAIOps">
-  <test thread-count="5" name="Script Testing">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
     <classes>
+
+      <class name="beakAIOps.ScriptModuleTestCases.TC01VerifyLoginFunctinality"/>
       <class name="beakAIOps.ScriptModuleTestCases.TC02CreateGlobalLevelScript"/>
+      
       <class name="beakAIOps.ScriptModuleTestCases.TC03EditGlobalLevelScript"/>
       <class name="beakAIOps.ScriptModuleTestCases.TC04DeactivateGlobalLevalScript"/>
-      <class name="beakAIOps.ScriptModuleTestCases.TC05ReactivateGlobalLevelScript"/>
-      <class name="beakAIOps.ScriptModuleTestCases.TC01VerifyLoginFunctinality"/>
-      <class name="beakAIOps.ScriptModuleTestCases.baseClass"/>
+      <class name="beakAIOps.ScriptModuleTestCases.TC05ReactivateGlobalLevelScript"/>      
     </classes>
-  </test> <!-- Script Testing -->
-</suite> <!-- BeakAIOps -->
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

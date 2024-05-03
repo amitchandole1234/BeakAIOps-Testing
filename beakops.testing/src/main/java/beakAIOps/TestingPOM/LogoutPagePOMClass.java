@@ -24,15 +24,17 @@ public class LogoutPagePOMClass
 //Step-2 Select Logout Option	
 	@FindBy(xpath="//span[text()='Logout']")
 		private WebElement clickLogout;
-		public void clickOnLogoutOption()
+		public void clickOnLogoutOption() throws InterruptedException
 		{
+			Thread.sleep(1000);
 			clickLogout.click();
 		}
 //Step-3 Click On "Yes" on Confirm Logout Pop-up	
 	@FindBy(xpath="//span[text()='Yes']")
 		private WebElement clickonYesAction;
-		public void clickOnYesAction()
+		public void clickOnYesAction() throws InterruptedException
 		{
+			Thread.sleep(1000);
 			clickonYesAction.click();	
 			System.out.println("The User is Sucessfully Logged Out");
 		}
